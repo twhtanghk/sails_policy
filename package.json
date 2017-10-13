@@ -1,0 +1,23 @@
+{
+  "name": "sails_policy",
+  "version": "0.0.1",
+  "description": "Commonly used sails policy",
+  "main": "index.js",
+  "repository": "https://github.com/twhtanghk/sails_policy",
+  "author": "<twhtanghk@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha test/*.coffee"
+  },
+  "dependencies": {
+    "activerecord-model": "^0.0.6",
+    "bluebird": "^3.5.1",
+    "co": "^4.6.0",
+    "coffee-script": "^1.12.7",
+    "lodash": "^4.17.4",
+    "merge-defaults": "^0.2.1",
+    "mocha": "^4.0.1",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1"
+  }
+}
