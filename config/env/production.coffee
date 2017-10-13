@@ -1,4 +1,7 @@
 module.exports =
+  admin: [
+    'admin@abc.com'
+  ]
   oauth2:
     url:
       verify: 'https://abc.com/auth/oauth2/verify/'
