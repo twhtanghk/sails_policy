@@ -3,10 +3,10 @@
     glob = require 'glob'
     path = require 'path'
 
-- [isAuth](docs/isAuth.html)
-- [isAdmin](docs/isAdmin.html)
-- [setCreatedBy](docs/setCreatedBy.html)
-- [setUpdatedBy](docs/setUpdatedBy.html)
+- [isAuth](isAuth.html)
+- [isAdmin](isAdmin.html)
+- [setCreatedBy](setCreatedBy.html)
+- [setUpdatedBy](setUpdatedBy.html)
 
     list = ["#{__dirname}/api/policies/*.litcoffee"]
 

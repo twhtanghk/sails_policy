@@ -12,4 +12,4 @@ policy = require 'sails_policy'
 module.exports = policy.isAuth
 ```
 
-## [API](https://rawcdn.githack.com/twhtanghk/activerecord-model/master/docs/index.html)
+## [API](https://rawcdn.githack.com/twhtanghk/sails_policy/master/docs/index.html)
