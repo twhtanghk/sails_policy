@@ -13,11 +13,11 @@ describe 'policy', ->
   it 'isAuth', ->
     socket = new Duplex()
     req = new IncomingMessage socket
-    req.headers = Authorization: "Bearer #{token}"
+    req.headers = authorization: "Bearer #{token}"
     res = new ServerResponse req
     
     new Promise (resolve, reject) ->
-      policy.isAuth req, res, (err) ->
-        console.log "policy #{err}"
-        if err?
-          return Promise.reject err
+      res.serverError = (data) ->
+        sails.log.error data
+        reject data
+      policy.isAuth req, res, resolve
