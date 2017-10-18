@@ -5,7 +5,7 @@
 
 - [isAuth](isAuth.html)
 - [isAdmin](isAdmin.html)
-- [isAdmin](isClient.html)
+- [isClient](isClient.html)
 - [setCreatedBy](setCreatedBy.html)
 - [setUpdatedBy](setUpdatedBy.html)
 
