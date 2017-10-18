@@ -8,7 +8,7 @@ define bearer strategy to verify input token
     passport.use 'bearer', new bearer.Strategy (token, done) -> co ->
       try 
         res = yield sails.config.oauth2.verify _.defaults(token: token, sails.config.oauth2)
-        done null, res.user
+        done null, _.extend res.user, client: res.client_id
       catch err
         done err, false
 

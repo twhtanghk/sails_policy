@@ -30,6 +30,11 @@
                 </a>
               
                 
+                <a class="source" href="isClient.html">
+                  isClient.litcoffee
+                </a>
+              
+                
                 <a class="source" href="setCreatedBy.html">
                   setCreatedBy.litcoffee
                 </a>
@@ -84,7 +89,7 @@ bearer = <span class="hljs-built_in">require</span> <span class="hljs-string">'p
             <div class="content"><div class='highlight'><pre>passport.use <span class="hljs-string">'bearer'</span>, <span class="hljs-keyword">new</span> bearer.Strategy (token, done) -&gt; co -&gt;
   <span class="hljs-keyword">try</span> 
     res = <span class="hljs-keyword">yield</span> sails.config.oauth2.verify _.defaults(token: token, sails.config.oauth2)
-    done <span class="hljs-literal">null</span>, res.user
+    done <span class="hljs-literal">null</span>, _.extend res.user, client: res.client_id
   <span class="hljs-keyword">catch</span> err
     done err, <span class="hljs-literal">false</span></pre></div></div>
             

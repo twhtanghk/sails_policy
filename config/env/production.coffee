@@ -2,6 +2,9 @@ module.exports =
   admin: [
     'admin@abc.com'
   ]
+  authClient: [
+    'client_credentials'
+  ]
   oauth2:
     url:
       verify: 'https://abc.com/auth/oauth2/verify/'

@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>setUpdatedBy.litcoffee</title>
+  <title>isClient.litcoffee</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <link rel="stylesheet" media="all" href="docco.css" />
@@ -53,7 +53,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>setUpdatedBy.litcoffee</h1>
+                  <h1>isClient.litcoffee</h1>
               </div>
           </li>
         
@@ -65,28 +65,14 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              
-            </div>
-            
-            <div class="content"><div class='highlight'><pre>_ = <span class="hljs-built_in">require</span> <span class="hljs-string">'lodash'</span></pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-2">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-2">&#182;</a>
-              </div>
-              <p>set updatedBy value to req.user</p>
+              <p>check if current token is issued to authorized oauth2 clients (authClient)</p>
 
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-params">(req, res, next)</span> -&gt;</span>
-  req.options.values ?= {}
-  _.extend req.options.values, updatedBy: req.user
-  next()</pre></div></div>
+  <span class="hljs-keyword">if</span> req.user.client <span class="hljs-keyword">in</span> sails.config.authClient
+    <span class="hljs-keyword">return</span> next()
+  res.forbidden <span class="hljs-string">"<span class="hljs-subst">#{req.user.client}</span> not in <span class="hljs-subst">#{JSON.stringify sails.config.authClient}</span>"</span></pre></div></div>
             
         </li>
         
