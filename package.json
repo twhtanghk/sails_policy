@@ -1,6 +1,6 @@
 {
   "name": "sails_policy",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Commonly used sails policy",
   "main": "index.js",
   "repository": "https://github.com/twhtanghk/sails_policy",
@@ -10,10 +10,10 @@
     "test": "mocha test/*.coffee"
   },
   "dependencies": {
-    "activerecord-model": "^0.0.8",
+    "activerecord-model": "^0.0.12",
     "bluebird": "^3.5.1",
     "co": "^4.6.0",
-    "coffee-script": "^1.12.7",
+    "coffeescript": "^2.3.2",
     "lodash": "^4.17.4",
     "merge-defaults": "^0.2.1",
     "mocha": "^4.0.1",
